@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="row mt-4 justify-content">
+    <div class="input-group col-12">
+      <input type="text" #cid class="form-control"  placeholder="digite a cidade para a pesquisa">
+      <div class="">
+        <button class="btn btn-primary" type="submit" (click)="pesquisar(cid.value)">Pesquisar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <app-previsao class="col-lg-4 mb-2" *ngFor="let previsao of previsoes" [previsao]="previsao"></app-previsao>
+  </div>
+</div>
